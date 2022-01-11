@@ -17,6 +17,20 @@
 #### Ogólny stan zgodnośći aplikacji ze standardem ,,Application Security Verification Standard 4.0.3" można określić jako **TODO**.
 #### Wyróżniono kilka głównych problemów wpływających na niezgodność aplikacji z wymaganiami standardu: TODO
 ## **2. Zakres i cele** 
+### **2.1 Cel i metodologia audytu**
+### **2.2 Zakres Audytu**
+####  Audyt objął nastepujące obszary :
+#### 1.
+#### 2.
+#### 3.
+#### 4.
+#### 5.
+#### 6.
+#### 7.
+#### 8.
+### **2.3 Wykonane czynności**
+### **2.4 Napotkane ograniczenia**
+### **2.5 Aplikacja**
 ## **3. Testowanie komponentów i obszarów**
 ## **4. Przegląd wyników i zaleceń** 
 ## **5. Sprawdzone zostało również**
