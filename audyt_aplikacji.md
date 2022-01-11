@@ -1,4 +1,5 @@
 # <center>Raport z audytu aplikacji e-commerce-food-shop-with-qr-codes</center>
+#### <center> Testowana aplikacja (wykonana w ramach pracy inżynierskiej): https://github.com/face1337/e-commerce-food-shop-with-qr-codes </center>
 ### Wersja raportu : 1.0
 ### Data wykonania audytu : 11.01.2022
 # Spis treści
