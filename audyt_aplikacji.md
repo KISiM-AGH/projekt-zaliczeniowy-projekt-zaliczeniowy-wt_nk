@@ -1,6 +1,6 @@
 # <center>Raport z audytu aplikacji e-commerce-food-shop-with-qr-codes</center>
 ## 1. Podsumowanie
-# Zakres i cele 
-# Testowanie komponentów i obszarów
-# Przegląd wyników i zaleceń 
-# Sprawdzone zostało również
+## 2. Zakres i cele 
+## 3. Testowanie komponentów i obszarów
+## 4. Przegląd wyników i zaleceń 
+## 5. Sprawdzone zostało również
