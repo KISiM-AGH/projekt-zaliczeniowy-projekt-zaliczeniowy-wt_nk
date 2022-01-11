@@ -13,6 +13,9 @@
 #### **4. Przegląd wyników i zaleceń** 
 #### **5. Sprawdzone zostało również**
 ## **1. Podsumowanie**
+#### Audyt aplikacji realizowany był jako audyt zgodności ze standardem Application Security Verification Standard 4.0.3 jak również pod kątem ogólnego bezpieczeństwa aplikacji.
+#### Ogólny stan zgodnośći aplikacji ze standardem ,,Application Security Verification Standard 4.0.3" można określić jako **TODO**.
+#### Wyróżniono kilka głównych problemów wpływających na niezgodność aplikacji z wymaganiami standardu: TODO
 ## **2. Zakres i cele** 
 ## **3. Testowanie komponentów i obszarów**
 ## **4. Przegląd wyników i zaleceń** 
