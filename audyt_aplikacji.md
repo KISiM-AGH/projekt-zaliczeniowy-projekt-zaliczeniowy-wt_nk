@@ -21,6 +21,8 @@
 ### **2.1 Cel i metodologia audytu**
 ### **2.2 Zakres Audytu**
 ####  Audyt objął nastepujące obszary :
+#### Audyt został przeprowadzony zgodnie z Level 1 ASVS
+
 #### V1. Architektura, design i modelowanie Zagrożeń
 #### V2. Uwierzytelnianie
 #### V3. Zarzadzanie sesjami
