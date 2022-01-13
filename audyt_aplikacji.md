@@ -45,4 +45,16 @@ Aplikacja e-commerce-food-shop-with-qr-codes jest aplikacją webową opartą o a
 ## **3. Testowanie komponentów i obszarów**
 ![Tabela](https://raw.githubusercontent.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/main/ASVS.PNG)
 ## **4. Przegląd wyników i zaleceń** 
+#### 4.1. Nieprawidłowa implementacja mechanizmu haseł
+###### Poziom ryzyka: Wysoki
+Mechanizm haseł ma sporo braków w kontekście zabezpieczeń:
+ Markup : * minimalna długość hasła jest mniejsza niż 12 znaków,
+ Markup : * hasło może składać się z ponad 64 znaków, ale dozwolone są również hasła ponad 128 znakowe,
+ Markup : * +hasła nie są obcinane jeśli zawierają spacje,
+            -kilka spacji nie jest zamienane na jedną,
+ Markup : * użytkownicy nie mogą zmienić hasła po zalogowaniu, mogą je jedynie zresetować przed zalogowaniem,
+ Markup : * reset hasła wymaga maila, jednak mechanizm jego wysyłania posiada duże braki gdyż jest "hardkodowany", przez to nie udało się zweryfikować czy wymagane jest stare i nowe hasło,
+ Markup : * hasła nie są porównywane z pulą najczęściej używanych haseł,
+ Markup : * brak max limitu długości hasła, wymogi to min. 8 znaków, nie może się składać z samych cyfr,
+ Markup : * użytkownik nie może wyświetlić wpisywanego hasła w formularz,
 ## **5. Sprawdzone zostało również**
