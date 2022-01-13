@@ -21,14 +21,20 @@
 ### **2.1 Cel i metodologia audytu**
 ### **2.2 Zakres Audytu**
 ####  Audyt objął nastepujące obszary :
-#### 1.
-#### 2.
-#### 3.
-#### 4.
-#### 5.
-#### 6.
-#### 7.
-#### 8.
+#### 1. Architektura, design i modelowanie Zagrożeń
+#### 2. Uwierzytelnianie
+#### 3. Zarzadzanie sesjami
+#### 4. Kontrol dostępu
+#### 5. Walidacja, sanityzacja i kodowanie 
+#### 6. Kryptografia
+#### 7. Obsługa błędów i logowanie
+#### 8. Ochrona danych
+#### 9. Komunikacja
+#### 10. Złośliwy kod
+#### 11. Logika biznesowa
+#### 12. Pliki i zasoby
+#### 13. Api i webserwisy
+#### 14. Konfiguracja
 ### **2.3 Wykonane czynności**
 ### **2.4 Napotkane ograniczenia**
 Analizowana aplikacja jest dostępna tylko w formie developerskiej. Nie została zahostowana na żadnym z portali co uniemożliwa przetestowanie niektórych punktów kontrolnych dostępnych tylko dla aplikacji w fazie produkcyjnej, gdyż są zależne od sposobu wdrożenia aplikacji.
