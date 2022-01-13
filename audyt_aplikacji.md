@@ -21,22 +21,21 @@
 ### **2.1 Cel i metodologia audytu**
 ### **2.2 Zakres Audytu**
 ####  Audyt objął nastepujące obszary :
-#### Audyt został przeprowadzony zgodnie z Level 1 ASVS
+##### Audyt został przeprowadzony zgodnie z Level 1 ASVS
 
-#### V1. Architektura, design i modelowanie Zagrożeń
-#### V2. Uwierzytelnianie
-#### V3. Zarzadzanie sesjami
-#### V4. Kontrol dostępu
-#### V5. Walidacja, sanityzacja i kodowanie 
-#### V6. Kryptografia
-#### V7. Obsługa błędów i logowanie
-#### V8. Ochrona danych
-#### V9. Komunikacja
-#### V10. Złośliwy kod
-#### V11. Logika biznesowa
-#### V12. Pliki i zasoby
-#### V13. Api i webserwisy
-#### V14. Konfiguracja
+##### V2. Uwierzytelnianie
+##### V3. Zarzadzanie sesjami
+##### V4. Kontrol dostępu
+##### V5. Walidacja, sanityzacja i kodowanie 
+##### V6. Kryptografia
+##### V7. Obsługa błędów i logowanie
+##### V8. Ochrona danych
+##### V9. Komunikacja
+##### V10. Złośliwy kod
+##### V11. Logika biznesowa
+##### V12. Pliki i zasoby
+##### V13. Api i webserwisy
+##### V14. Konfiguracja
 ### **2.3 Wykonane czynności**
 ### **2.4 Napotkane ograniczenia**
 Analizowana aplikacja jest dostępna tylko w formie developerskiej. Nie została zahostowana na żadnym z portali co uniemożliwa przetestowanie niektórych punktów kontrolnych dostępnych tylko dla aplikacji w fazie produkcyjnej, gdyż są zależne od sposobu wdrożenia aplikacji.
