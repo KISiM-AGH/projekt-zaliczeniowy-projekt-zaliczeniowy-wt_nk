@@ -11,6 +11,7 @@
 ####  2.4 Napotkane ograniczenia
 Analizowana aplikacja jest dostępna tylko w formie developerskiej. Nie została zahostowana na żadnym z portali co uniemożliwa przetestowanie niektórych punktów kontrolnych dostępnych tylko dla aplikacji w fazie produkcyjnej, gdyż są zależne od sposobu wdrożenia aplikacji.
 ####  2.5 Aplikacja 
+Aplikacja e-commerce-food-shop-with-qr-codes jest aplikacją webową opartą o architekturę typu MVT (Model-View-Template). Jako backend aplikacji wykorzystano popularny framework Django (python), frontend zaś został utworzony przy pomocy Bootstrap'a i dodatkowych styli CSS. Użyta baza danych to PostgreSQL
 #### **3. Testowanie komponentów i obszarów**
 #### **4. Przegląd wyników i zaleceń** 
 #### **5. Sprawdzone zostało również**
