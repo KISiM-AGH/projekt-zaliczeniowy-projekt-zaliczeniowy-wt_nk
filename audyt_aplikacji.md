@@ -38,7 +38,8 @@
 ##### V14. Konfiguracja
 ### **2.3 Wykonane czynności**
 ### **2.4 Napotkane ograniczenia**
-Analizowana aplikacja jest dostępna tylko w formie developerskiej. Nie została zahostowana na żadnym z portali co uniemożliwa przetestowanie niektórych punktów kontrolnych dostępnych tylko dla aplikacji w fazie produkcyjnej, gdyż są zależne od sposobu wdrożenia aplikacji.
+Analizowana aplikacja jest dostępna tylko w formie developerskiej. Nie została zahostowana na żadnym z portali co uniemożliwa przetestowanie niektórych punktów kontrolnych dostępnych tylko dla aplikacji w fazie produkcyjnej, gdyż są zależne od sposobu wdrożenia aplikacji. 
+Dodatkowo aplikację przetestowano aby sprawdzić czy jest zgodna z Level 1 ASVS. Tym samym wiele z wymagań zostało wyłączonych (w tym cała kategoria V1: Architektura, projektowanie i modelowanie zagrożeń)
 ### **2.5 Aplikacja**
 Aplikacja e-commerce-food-shop-with-qr-codes jest aplikacją webową opartą o architekturę typu MVT (Model-View-Template). Jako backend aplikacji wykorzystano popularny framework Django (python), frontend zaś został utworzony przy pomocy Bootstrap'a i dodatkowych styli CSS. Użyta baza danych to PostgreSQL
 ## **3. Testowanie komponentów i obszarów**
