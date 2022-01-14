@@ -58,8 +58,8 @@ Mechanizm haseł ma sporo braków w kontekście zabezpieczeń:
  * brak max limitu długości hasła, wymogi to min. 8 znaków, nie może się składać z samych cyfr,
  * użytkownik nie może wyświetlić wpisywanego hasła w formularz,
 ## **5. Sprawdzone zostało również**
-####1. Sql injection
+#### 1. Sql injection
 ###### 
 ###### W ramach przeprowadzenia testu wykorzystane zostało narzędzie Sqlmap pozwalające na automatyczne przeprowadzenie testów.
-###### W testowanej aplikacji mimo kilku prób również z wykorzystaniem level=5 ris=3 nie wykryto podatności na SQLInjection.
+###### W testowanej aplikacji mimo kilku prób również z wykorzystaniem level=5 risk=3 nie wykryto podatności na SQLInjection.
 ###### Powodem odporności jest wykorzystanie frameworka Django (Python) w którym zapytania są konstruowane przy użyciu parametryzacji zapytań. Kod SQL zapytania jest definiowany niezależnie od parametrów zapytania. Parametry dostarczone przez użytkownia są pomijane przez podstawowy sterownik bazy danych.
