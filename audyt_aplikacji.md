@@ -109,7 +109,7 @@ System zabezpieczający uwierzytelnianie posiada braki:
  * poprawa weryfikacji zasobów
  * zablokowanie możliwości wykonywania żadań z przesłanych plików.
 #### 4.8 Niedostateczna Konfiguracja zabezpieczeń
-####### Poziom ryzyka: Wysoki
+###### Poziom ryzyka: Wysoki
  * składniki aplikacji wymagają uaktualnienia.
  * nie wszystkie niepotrzebne funkcje i konfiguracje zostały usunięte.
  * nagłówek Strict-Transport-Security nie pojawia się we wszystkich odpowiedziach.
