@@ -114,6 +114,19 @@ Zalecenia:
  * Aplikacja nie wymaga re-autentykacji lub dwu etapowej weryfikacji przed wprowadzeniem wrażliwych danych (adres dostawy, adres email).
 ###### Zalecenia:
  * Poprawić implementację po wprowadzeniu adresu email podczas rejestracji poprzez konieczność potwierdzenia założenia konta, oraz dodać wysyłanie e-mail'a po dodaniu adresu dostawy.
+
+#### 4.7 Błędnie zaimplementowany system do obłsugi błędów i wyjątków
+###### Poziom ryzyka: Krytyczny
+Wykryto następujące błędy w systemie do obsługi błędów i wyjątków:
+ * mechanizm wysyłania emaili jest zahardkodowany, co powoduje błędy aplikacji, jeśli ustawienia nie zostaną zmienione. Jeśli skrzynka z której wysyłane są wiadomości do użytkowników, którzy tworzą konto w serwisie wymaga podwójnej walidacji, aplikacja wyrzuci błąd.
+###### Zalecenia:
+ * Dodać odpowiedni mechanizm obsługi wyjątków.
+
+#### 4.8 Brak kilku etapowej walidacji przy użyciu panelu administratora:
+###### Poziom ryzyka: Średni
+ * Logowanie oraz modyfikowanie aplikacji w panelu administratora nie wymaga kilku etapowej walidacji.
+###### Zalecenia:
+ * Zaimplementować system obsługujący kilku-etapową walidację dla systemu administratora, np. potwierdzenie e-mail lub kod SMS.
 ## **5. Sprawdzone zostało również**
 #### 1. Sql injection
 ###### Jedna z częstrzych i niebezpiecznych podatności w aplikacjach webowych. W aplikacji wykorzystywana jest baza danych postgresql będąca jedną z najbardziej popularnych wyborów.
