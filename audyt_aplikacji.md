@@ -93,14 +93,21 @@ System zabezpieczający uwierzytelnianie posiada braki:
  * dodać wysyłanie wiadomości e-mail po pomyślnym zresetowaniu hasła.
 #### 4.6. Brak ograniczeń przepływów logiki biznesowej
 ###### Poziom ryzyka: Średni   
- * brak limitu dla działań biznesowych i transkacji
- * brak mechanizmu chroniącego przed nadmiernymi połączeniami
- * brak weryfikacji czy kroki są przetwarzane w realistycznym czasie ludzkim
- * brak dodatkowej weryfikacji przy składaniu zamówienia
+ * brak limitu dla działań biznesowych i transkacji.
+ * brak mechanizmu chroniącego przed nadmiernymi połączeniami.
+ * brak weryfikacji czy kroki są przetwarzane w realistycznym czasie ludzkim.
+ * brak dodatkowej weryfikacji przy składaniu zamówienia.
 ###### Zalecenia :
  * przed wypuszczeniem aplikacji na etap produkcyjny należy dodać limity czasowe na przeprowadzanie zamówień
  * ograniczenie maksymalnej liczby zamówień przez jednego użytkownika w określonym czasie do prawdopodobnej wartości
  * dodatkowa weryfikacja użytkownika przy składaniu zamówienia np. reCAPTCHA
+#### 4.7 Weryfikacja plików i zasobów
+###### Poziom ryzyka: Niski
+ * brak skanera antywirusowego dla dodawanych zasobów.
+ * możliwość wykonywania przesłanej zawartości jako HTML/JavaScript ale tylko z poziomu admina.
+###### Zalecenia :
+ * poprawa weryfikacji zasobów
+ * zablokowanie możliwości wykonywania żadań z przesłanych plików.
 ## **5. Sprawdzone zostało również**
 #### 1. Sql injection
 ###### Jedna z częstrzych i niebezpiecznych podatności w aplikacjach webowych. W aplikacji wykorzystywana jest baza danych postgresql będąca jedną z najbardziej popularnych wyborów.
