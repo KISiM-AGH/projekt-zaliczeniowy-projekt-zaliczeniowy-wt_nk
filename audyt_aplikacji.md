@@ -37,6 +37,11 @@
 ##### V13. Api i webserwisy
 ##### V14. Konfiguracja
 ### **2.3 Wykonane czynności**
+#### W ramach audytu zostały wykonane nastepujące czynności :
+#### - Analiza kodu źródłowego aplikacji oraz wybranych bibioltek przez nia wykrozystywanych
+#### - Analiza dokumentacji wykorzystywanych frameworków
+#### - Testy na uruchomionej lokalnie aplikacji
+#### - Konsultacje z deweloperami aplikacji
 ### **2.4 Napotkane ograniczenia**
 Analizowana aplikacja jest dostępna tylko w formie developerskiej. Nie została zahostowana na żadnym z portali co uniemożliwa przetestowanie niektórych punktów kontrolnych dostępnych tylko dla aplikacji w fazie produkcyjnej, gdyż są zależne od sposobu wdrożenia aplikacji. 
 Dodatkowo aplikację przetestowano aby sprawdzić czy jest zgodna z Level 1 ASVS. Tym samym wiele z wymagań zostało wyłączonych (w tym cała kategoria V1: Architektura, projektowanie i modelowanie zagrożeń)
