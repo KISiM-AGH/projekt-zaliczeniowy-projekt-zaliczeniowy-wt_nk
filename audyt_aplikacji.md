@@ -27,7 +27,6 @@
 ##### V3. Zarzadzanie sesjami
 ##### V4. Kontrol dostępu
 ##### V5. Walidacja, sanityzacja i kodowanie 
-##### V6. Kryptografia
 ##### V7. Obsługa błędów i logowanie
 ##### V8. Ochrona danych
 ##### V9. Komunikacja
@@ -127,6 +126,19 @@ Wykryto następujące błędy w systemie do obsługi błędów i wyjątków:
  * Logowanie oraz modyfikowanie aplikacji w panelu administratora nie wymaga kilku etapowej walidacji.
 ###### Zalecenia:
  * Zaimplementować system obsługujący kilku-etapową walidację dla systemu administratora, np. potwierdzenie e-mail lub kod SMS.
+ 
+#### 4.9 Brak ostrzerzeń przy klikaniu w link URL
+###### Poziom ryzyka: Niski
+* W panelu administratora widnieje link do serwisu map google w celu nawigacji do klienta, jednak po jego kliknięciu nie widnieje żadne zagrożenie, a adres do którego on przekierowuje nie znajduje się na white-liście.
+##### Zalecenia:
+ * Dodać serwis map google do white-listy.
+
+#### 4.10 Błędy w ochronie przed OS command injection
+###### Poziom ryzyka: Wysoki
+ * Przy dodawaniu produktów do koszyka zauważono lukę w bezpieczeństwie, która pozwala na wykonanie ataku OS command injection.
+###### Zalecenia:
+* Dodać walidację do formularza, gdzie podawane jest food_id.
+
 ## **5. Sprawdzone zostało również**
 #### 1. Sql injection
 ###### Jedna z częstrzych i niebezpiecznych podatności w aplikacjach webowych. W aplikacji wykorzystywana jest baza danych postgresql będąca jedną z najbardziej popularnych wyborów.
