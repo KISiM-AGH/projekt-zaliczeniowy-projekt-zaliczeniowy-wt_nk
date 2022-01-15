@@ -13,6 +13,7 @@
 #### **3. Testowanie komponentów i obszarów**
 #### **4. Przegląd wyników i zaleceń** 
 #### **5. Sprawdzone zostało również**
+#### **6. Załączniki
 ## **1. Podsumowanie**
 #### Audyt aplikacji realizowany był jako audyt zgodności ze standardem Application Security Verification Standard 4.0.3 jak również pod kątem ogólnego bezpieczeństwa aplikacji.
 #### Ogólny stan zgodnośći aplikacji ze standardem ,,Application Security Verification Standard 4.0.3" można określić jako **Słaby**.
@@ -29,7 +30,6 @@ ASVS 4.0 został wybrany ze względu na najbardziej szeroki zakres bezpiczeństw
 ##### V3. Zarzadzanie sesjami
 ##### V4. Kontrol dostępu
 ##### V5. Walidacja, sanityzacja i kodowanie 
-##### V6. Kryptografia
 ##### V7. Obsługa błędów i logowanie
 ##### V8. Ochrona danych
 ##### V9. Komunikacja
@@ -168,6 +168,19 @@ Wykryto następujące błędy w systemie do obsługi błędów i wyjątków:
  * Logowanie oraz modyfikowanie aplikacji w panelu administratora nie wymaga kilku etapowej walidacji.
 ###### Zalecenia:
  * Zaimplementować system obsługujący kilku-etapową walidację dla systemu administratora, np. potwierdzenie e-mail lub kod SMS.
+ 
+#### 4.9 Brak ostrzerzeń przy klikaniu w link URL
+###### Poziom ryzyka: Niski
+* W panelu administratora widnieje link do serwisu map google w celu nawigacji do klienta, jednak po jego kliknięciu nie widnieje żadne zagrożenie, a adres do którego on przekierowuje nie znajduje się na white-liście.
+##### Zalecenia:
+ * Dodać serwis map google do white-listy.
+
+#### 4.10 Błędy w ochronie przed OS command injection
+###### Poziom ryzyka: Wysoki
+ * Przy dodawaniu produktów do koszyka zauważono lukę w bezpieczeństwie, która pozwala na wykonanie ataku OS command injection.
+###### Zalecenia:
+* Dodać walidację do formularza, gdzie podawane jest food_id.
+
 ## **5. Sprawdzone zostało również**
 #### 1. Sql injection
 ###### Jedna z częstrzych i niebezpiecznych podatności w aplikacjach webowych. W aplikacji wykorzystywana jest baza danych postgresql będąca jedną z najbardziej popularnych wyborów.
@@ -183,3 +196,6 @@ OS Command Injection przeprowadzono za pomocą OWASP Zap Proxy. Jak się okazał
 ![os_command_injection](https://raw.githubusercontent.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/main/Os%20command%20injection.PNG)
 ###### Zalecenia:
 Dodać walidację do formularza, gdzie podawane jest food_id.
+
+## **6. Załączniki**
+Wraz z raportem audytu załączono raport z jednej sesji programu OWASP Zap Proxy, arkusz excel w którym sprawdzano checklistę ASVS level 1 oraz obrazy wykresów i tabeli.
