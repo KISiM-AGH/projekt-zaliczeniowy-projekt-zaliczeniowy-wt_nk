@@ -91,3 +91,12 @@ System zabezpieczający uwierzytelnianie posiada braki:
 ###### W ramach przeprowadzenia testu wykorzystane zostało narzędzie Sqlmap pozwalające na automatyczne przeprowadzenie testów.
 ###### W testowanej aplikacji mimo kilku prób również z wykorzystaniem level=5 risk=3 nie wykryto podatności na SQLInjection.
 ###### Powodem odporności jest wykorzystanie frameworka Django (Python) w którym zapytania są konstruowane przy użyciu parametryzacji zapytań. Kod SQL zapytania jest definiowany niezależnie od parametrów zapytania. Parametry dostarczone przez użytkownia są pomijane przez podstawowy sterownik bazy danych.
+
+#### 2. OS command injection
+###### Poziom ryzyka: Wysoki
+Jest to luka w zabezpieczeniach sieci Web, która umożliwia atakującemu wykonanie dowolnych poleceń systemu operacyjnego (OS) na serwerze, na którym uruchomiona jest aplikacja, i zazwyczaj w pełni naraża aplikację i wszystkie jej dane. Bardzo często atakujący może wykorzystać podatność na wstrzyknięcie polecenia systemu operacyjnego, aby złamać inne części infrastruktury hostingowej, wykorzystując relacje zaufania do skierowania ataku na inne systemy w organizacji.
+
+OS Command Injection przeprowadzono za pomocą OWASP Zap Proxy. Jak się okazało, w jedym z formularzy brakuje walidacji wprowadzanych danych, co pozwala na użycie tej metody. Miejsce w którym można je wykonać to dodawanie do koszyka produktów i w miejsce food_id wstawiana jest komenda systemowa.
+![os_command_injection](https://raw.githubusercontent.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/main/Os%20command%20injection.PNG)
+###### Zalecenia:
+Dodać walidację do formularza, gdzie podawane jest food_id.
