@@ -19,6 +19,8 @@
 #### Wyróżniono kilka głównych problemów wpływających na niezgodność aplikacji z wymaganiami standardu: TODO
 ## **2. Zakres i cele** 
 ### **2.1 Cel i metodologia audytu**
+#### Celem przeprowadzenia audytu była weryfikacja spełnienia standardu bezpieczeństwa ASVS 4.0 na poziomie 1  wobec nowoczesnych aplikacji webowych przez aplikacje e-commerce-food-shop-with-qr-codes.
+ASVS 4.0 został wybrany ze względu na najbardziej szeroki zakres bezpiczeństwa wobec aplikacji webowych. Poziom 1 wydaje się być odpowiedni dla sprawdzanej aplikacji.
 ### **2.2 Zakres Audytu**
 ####  Audyt objął nastepujące obszary :
 ##### Audyt został przeprowadzony zgodnie z Level 1 ASVS
