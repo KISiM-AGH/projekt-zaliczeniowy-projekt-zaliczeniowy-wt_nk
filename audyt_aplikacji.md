@@ -17,7 +17,21 @@
 ## **1. Podsumowanie**
 #### Audyt aplikacji realizowany był jako audyt zgodności ze standardem Application Security Verification Standard 4.0.3 jak również pod kątem ogólnego bezpieczeństwa aplikacji.
 #### Ogólny stan zgodnośći aplikacji ze standardem ,,Application Security Verification Standard 4.0.3" można określić jako **Słaby**.
-#### Wyróżniono kilka głównych problemów wpływających na niezgodność aplikacji z wymaganiami standardu: TODO
+#### Wyróżniono kilka głównych problemów wpływających na niezgodność aplikacji z wymaganiami standardu: 
+ * Nieprawidłowa implementacja mechanizmu haseł
+ * Problem z  Ogólnymi zabezpieczeniami uwierzytelniania
+ * Credential Recovery
+ * Konfiguracja ochrony danych
+ * Brak ograniczeń przepływów logiki biznesowej
+ * Sposób weryfikacji plików i zasobów
+ * Niedostateczna Konfiguracja zabezpieczeń
+ * Braki w implementacji związanej z Session Binding (Implement Digital Identity)
+ * Braki w zarządzaniu sesją w oparciu o pliki cookie
+ * Braki w obronie przeciwko lukom w zarządzaniu sesją
+ * Błędnie zaimplementowany system do obłsugi błędów i wyjątków
+ * Brak kilku etapowej walidacji przy użyciu panelu administratora:
+ * Brak ostrzerzeń przy klikaniu w link URL
+ * Błędy w ochronie przed OS command injection
 ## **2. Zakres i cele** 
 ### **2.1 Cel i metodologia audytu**
 #### Celem przeprowadzenia audytu była weryfikacja spełnienia standardu bezpieczeństwa ASVS 4.0 na poziomie 1  wobec nowoczesnych aplikacji webowych przez aplikacje e-commerce-food-shop-with-qr-codes.
