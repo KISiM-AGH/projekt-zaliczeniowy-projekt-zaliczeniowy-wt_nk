@@ -91,7 +91,7 @@ System zabezpieczający uwierzytelnianie posiada braki:
 ###### Zalecenia:
  * wyłączyć domyślne konto administratora i wprowadzić nową grupę użytkowników z podobnymi uprawnieniami,
  * dodać wysyłanie wiadomości e-mail po pomyślnym zresetowaniu hasła.
-#### 4.5 Konfiguracja ochrony danych
+#### 4.4. Konfiguracja ochrony danych
 ###### Poziom ryzyka: Niski
  * dane uwierzytelniające nie są usuwane po zakończeniu sesji
  * brak informacji dla użytkowników o sposobie wykorzystania ich danych
@@ -101,7 +101,7 @@ System zabezpieczający uwierzytelnianie posiada braki:
  * przed wypuszczeniem aplikacji na etap produkcyjny należy określić jasną politykę wykorzystywania poszczególnych danych
  * poinformowanie użytkownika które z danych są wykorzystywane
 
-#### 4.6. Brak ograniczeń przepływów logiki biznesowej
+#### 4.5. Brak ograniczeń przepływów logiki biznesowej
 ###### Poziom ryzyka: Średni   
  * brak limitu dla działań biznesowych i transkacji.
  * brak mechanizmu chroniącego przed nadmiernymi połączeniami.
@@ -112,7 +112,7 @@ System zabezpieczający uwierzytelnianie posiada braki:
  * ograniczenie maksymalnej liczby zamówień przez jednego użytkownika w określonym czasie do prawdopodobnej wartości
  * dodatkowa weryfikacja użytkownika przy składaniu zamówienia np. reCAPTCHA
  
-#### 4.7 Weryfikacja plików i zasobów
+#### 4.6 Weryfikacja plików i zasobów
 ###### Poziom ryzyka: Niski
  * brak skanera antywirusowego dla dodawanych zasobów.
  * możliwość wykonywania przesłanej zawartości jako HTML/JavaScript ale tylko z poziomu admina.
@@ -120,7 +120,7 @@ System zabezpieczający uwierzytelnianie posiada braki:
  * poprawa weryfikacji zasobów
  * zablokowanie możliwości wykonywania żadań z przesłanych plików.
  
-#### 4.8 Niedostateczna Konfiguracja zabezpieczeń
+#### 4.7 Niedostateczna Konfiguracja zabezpieczeń
 ###### Poziom ryzyka: Wysoki
  * składniki aplikacji wymagają uaktualnienia.
  * nie wszystkie niepotrzebne funkcje i konfiguracje zostały usunięte.
@@ -131,14 +131,14 @@ System zabezpieczający uwierzytelnianie posiada braki:
  * Zmiana defaultowych wartości dla komponentów middleware dostarczanych wraz z Django pozwalających na uchronienie się na powyższe zagrożenia.
  * usunięcie zbędnych/testowych/przykładowych konfiguracji i funkcji przed etapem produkcyjnym
 
-#### 4.4. Braki w implementacji związanej z Session Binding (Implement Digital Identity)
+#### 4.8. Braki w implementacji związanej z Session Binding (Implement Digital Identity)
 ###### Poziom ryzyka: Niski
 Wykryto następujące braki w implementacji:
  * tokeny sesji składają się z 32 bitów,
 ###### Zalecenia:
  * Poprawić implementację i zwiększyć liczbę bitów w tokenach sesji. W tym przypadku ryzyko nie jest tak duże, ponieważ Django dobrze chroni przed atakami sesji.
 
-#### 4.5. Braki w zarządzaniu sesją w oparciu o pliki cookie
+#### 4.9. Braki w zarządzaniu sesją w oparciu o pliki cookie
 ###### Poziom ryzyka: Średni
 Wykryto następujące braki:
  * brak ustawionych atrybutów HttpOnly w ciasteczkach, co pozwala na dostęp do nich przez JavaScript,
@@ -150,32 +150,32 @@ Zalecenia:
   - SESSION_COOKIE_SAMESITE = True,
   - SESSION_COOKIE_NAME = '__Host-'.
 
-#### 4.6. Braki w obronie przeciwko lukom w zarządzaniu sesją
+#### 4.10. Braki w obronie przeciwko lukom w zarządzaniu sesją
 ###### Poziom ryzyka: Średni
  * Aplikacja nie wymaga re-autentykacji lub dwu etapowej weryfikacji przed wprowadzeniem wrażliwych danych (adres dostawy, adres email).
 ###### Zalecenia:
  * Poprawić implementację po wprowadzeniu adresu email podczas rejestracji poprzez konieczność potwierdzenia założenia konta, oraz dodać wysyłanie e-mail'a po dodaniu adresu dostawy.
 
-#### 4.7 Błędnie zaimplementowany system do obłsugi błędów i wyjątków
+#### 4.11 Błędnie zaimplementowany system do obłsugi błędów i wyjątków
 ###### Poziom ryzyka: Krytyczny
 Wykryto następujące błędy w systemie do obsługi błędów i wyjątków:
  * mechanizm wysyłania emaili jest zahardkodowany, co powoduje błędy aplikacji, jeśli ustawienia nie zostaną zmienione. Jeśli skrzynka z której wysyłane są wiadomości do użytkowników, którzy tworzą konto w serwisie wymaga podwójnej walidacji, aplikacja wyrzuci błąd.
 ###### Zalecenia:
  * Dodać odpowiedni mechanizm obsługi wyjątków.
 
-#### 4.8 Brak kilku etapowej walidacji przy użyciu panelu administratora:
+#### 4.12 Brak kilku etapowej walidacji przy użyciu panelu administratora:
 ###### Poziom ryzyka: Średni
  * Logowanie oraz modyfikowanie aplikacji w panelu administratora nie wymaga kilku etapowej walidacji.
 ###### Zalecenia:
  * Zaimplementować system obsługujący kilku-etapową walidację dla systemu administratora, np. potwierdzenie e-mail lub kod SMS.
  
-#### 4.9 Brak ostrzerzeń przy klikaniu w link URL
+#### 4.13 Brak ostrzerzeń przy klikaniu w link URL
 ###### Poziom ryzyka: Niski
 * W panelu administratora widnieje link do serwisu map google w celu nawigacji do klienta, jednak po jego kliknięciu nie widnieje żadne zagrożenie, a adres do którego on przekierowuje nie znajduje się na white-liście.
 ##### Zalecenia:
  * Dodać serwis map google do white-listy.
 
-#### 4.10 Błędy w ochronie przed OS command injection
+#### 4.14 Błędy w ochronie przed OS command injection
 ###### Poziom ryzyka: Wysoki
  * Przy dodawaniu produktów do koszyka zauważono lukę w bezpieczeństwie, która pozwala na wykonanie ataku OS command injection.
 ###### Zalecenia:
@@ -183,10 +183,10 @@ Wykryto następujące błędy w systemie do obsługi błędów i wyjątków:
 
 ## **5. Sprawdzone zostało również**
 #### 1. Sql injection
-###### Jedna z częstrzych i niebezpiecznych podatności w aplikacjach webowych. W aplikacji wykorzystywana jest baza danych postgresql będąca jedną z najbardziej popularnych wyborów.
-###### W ramach przeprowadzenia testu wykorzystane zostało narzędzie Sqlmap pozwalające na automatyczne przeprowadzenie testów.
-###### W testowanej aplikacji mimo kilku prób również z wykorzystaniem level=5 risk=3 nie wykryto podatności na SQLInjection.
-###### Powodem odporności jest wykorzystanie frameworka Django (Python) w którym zapytania są konstruowane przy użyciu parametryzacji zapytań. Kod SQL zapytania jest definiowany niezależnie od parametrów zapytania. Parametry dostarczone przez użytkownia są pomijane przez podstawowy sterownik bazy danych.
+Jedna z częstrzych i niebezpiecznych podatności w aplikacjach webowych. W aplikacji wykorzystywana jest baza danych postgresql będąca jedną z najbardziej popularnych wyborów.
+W ramach przeprowadzenia testu wykorzystane zostało narzędzie Sqlmap pozwalające na automatyczne przeprowadzenie testów.
+W testowanej aplikacji mimo kilku prób również z wykorzystaniem level=5 risk=3 nie wykryto podatności na SQLInjection.
+Powodem odporności jest wykorzystanie frameworka Django (Python) w którym zapytania są konstruowane przy użyciu parametryzacji zapytań. Kod SQL zapytania jest definiowany niezależnie od parametrów zapytania. Parametry dostarczone przez użytkownia są pomijane przez podstawowy sterownik bazy danych.
 
 #### 2. OS command injection
 ###### Poziom ryzyka: Wysoki
