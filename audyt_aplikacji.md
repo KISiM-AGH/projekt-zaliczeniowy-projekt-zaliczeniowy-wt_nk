@@ -91,7 +91,16 @@ System zabezpieczający uwierzytelnianie posiada braki:
 ###### Zalecenia:
  * wyłączyć domyślne konto administratora i wprowadzić nową grupę użytkowników z podobnymi uprawnieniami,
  * dodać wysyłanie wiadomości e-mail po pomyślnym zresetowaniu hasła.
- 
+#### 4.5 Konfiguracja ochrony danych
+###### Poziom ryzyka: Niski
+ * dane uwierzytelniające nie są usuwane po zakończeniu sesji
+ * brak informacji dla użytkowników o sposobie wykorzystania ich danych
+ * brak przedstawienia polityki wykorzystywania wrażliwych danych
+###### Zalecenia :
+ * usuwanie danych uwierzytelniajacych po zakończenu sesji
+ * przed wypuszczeniem aplikacji na etap produkcyjny należy określić jasną politykę wykorzystywania poszczególnych danych
+ * poinformowanie użytkownika które z danych są wykorzystywane
+
 #### 4.6. Brak ograniczeń przepływów logiki biznesowej
 ###### Poziom ryzyka: Średni   
  * brak limitu dla działań biznesowych i transkacji.
