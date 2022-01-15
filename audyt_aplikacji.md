@@ -13,6 +13,7 @@
 #### **3. Testowanie komponentów i obszarów**
 #### **4. Przegląd wyników i zaleceń** 
 #### **5. Sprawdzone zostało również**
+#### **6. Załączniki
 ## **1. Podsumowanie**
 #### Audyt aplikacji realizowany był jako audyt zgodności ze standardem Application Security Verification Standard 4.0.3 jak również pod kątem ogólnego bezpieczeństwa aplikacji.
 #### Ogólny stan zgodnośći aplikacji ze standardem ,,Application Security Verification Standard 4.0.3" można określić jako **TODO**.
@@ -154,3 +155,6 @@ OS Command Injection przeprowadzono za pomocą OWASP Zap Proxy. Jak się okazał
 ![os_command_injection](https://raw.githubusercontent.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/main/Os%20command%20injection.PNG)
 ###### Zalecenia:
 Dodać walidację do formularza, gdzie podawane jest food_id.
+
+## **6. Załączniki**
+Wraz z raportem audytu załączono raport z jednej sesji programu OWASP Zap Proxy, arkusz excel w którym sprawdzano checklistę ASVS level 1 oraz obrazy wykresów i tabeli.
