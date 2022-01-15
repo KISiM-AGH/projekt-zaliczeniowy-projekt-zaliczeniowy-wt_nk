@@ -90,6 +90,24 @@ System zabezpieczający uwierzytelnianie posiada braki:
  * wyłączyć domyślne konto administratora i wprowadzić nową grupę użytkowników z podobnymi uprawnieniami,
  * dodać wysyłanie wiadomości e-mail po pomyślnym zresetowaniu hasła.
 
+#### 4.4. Braki w implementacji związanej z Session Binding (Implement Digital Identity)
+###### Poziom ryzyka: Niski
+Wykryto następujące braki w implementacji:
+ * tokeny sesji składają się z 32 bitów,
+###### Zalecenia:
+ * Poprawić implementację i zwiększyć liczbę bitów w tokenach sesji. W tym przypadku ryzyko nie jest tak duże, ponieważ Django dobrze chroni przed atakami sesji.
+
+#### 4.5. Braki w zarządzaniu sesją w oparciu o pliki cookie
+###### Poziom ryzyka: Średni
+Wykryto następujące braki:
+ * brak ustawionych atrybutów HttpOnly w ciasteczkach, co pozwala na dostęp do nich przez JavaScript,
+ * brak ustawionych atrybutów SameSite,
+ * brak przedrostka "__Host-".
+Zalecenia:
+* W pliku settings.py dodać ustawienia:
+** SESSION_COOKIE_HTTPONLY = True,
+** SESSION_COOKIE_SAMESITE = True,
+** SESSION_COOKIE_NAME = '__Host-'.
 ## **5. Sprawdzone zostało również**
 #### 1. Sql injection
 ###### Jedna z częstrzych i niebezpiecznych podatności w aplikacjach webowych. W aplikacji wykorzystywana jest baza danych postgresql będąca jedną z najbardziej popularnych wyborów.
