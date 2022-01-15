@@ -108,6 +108,16 @@ System zabezpieczający uwierzytelnianie posiada braki:
 ###### Zalecenia :
  * poprawa weryfikacji zasobów
  * zablokowanie możliwości wykonywania żadań z przesłanych plików.
+#### 4.8 Niedostateczna Konfiguracja zabezpieczeń
+####### Poziom ryzyka: Wysoki
+ * składniki aplikacji wymagają uaktualnienia.
+ * nie wszystkie niepotrzebne funkcje i konfiguracje zostały usunięte.
+ * nagłówek Strict-Transport-Security nie pojawia się we wszystkich odpowiedziach.
+ * brak nagłowka Referrer-Policy.
+ * nagłówek Cross-Origin Resource Sharing nie ma określonej listy zaufanych domen.
+###### Zalecenia :
+ * Zmiana defaultowych wartości dla komponentów middleware dostarczanych wraz z Django pozwalających na uchronienie się na powyższe zagrożenia.
+ * usunięcie zbędnych/testowych/przykładowych konfiguracji i funkcji przed etapem produkcyjnym
 ## **5. Sprawdzone zostało również**
 #### 1. Sql injection
 ###### Jedna z częstrzych i niebezpiecznych podatności w aplikacjach webowych. W aplikacji wykorzystywana jest baza danych postgresql będąca jedną z najbardziej popularnych wyborów.
