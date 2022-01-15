@@ -201,3 +201,4 @@ Dodać walidację do formularza, gdzie podawane jest food_id.
 
 ## **6. Załączniki**
 Wraz z raportem audytu załączono raport z jednej sesji programu OWASP Zap Proxy, arkusz excel w którym sprawdzano checklistę ASVS level 1 oraz obrazy wykresów i tabeli.
+https://github.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk
