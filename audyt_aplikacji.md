@@ -43,7 +43,10 @@ Dodatkowo aplikację przetestowano aby sprawdzić czy jest zgodna z Level 1 ASVS
 ### **2.5 Aplikacja**
 Aplikacja e-commerce-food-shop-with-qr-codes jest aplikacją webową opartą o architekturę typu MVT (Model-View-Template). Jako backend aplikacji wykorzystano popularny framework Django (python), frontend zaś został utworzony przy pomocy Bootstrap'a i dodatkowych styli CSS. Użyta baza danych to PostgreSQL
 ## **3. Testowanie komponentów i obszarów**
-![Tabela](https://raw.githubusercontent.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/main/ASVS.PNG)
+![Tabela](https://raw.githubusercontent.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/main/tabela.PNG)
+![Wykres wszystkich wymagań](https://raw.githubusercontent.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/main/Liczba%20wymaga%C5%84%20zgodnych%2C%20niezgodnych%20i%20wy%C5%82%C4%85czonych.png)
+![Wykres wyników przetestowanych wymagań](https://raw.githubusercontent.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/main/Wynik%20audytu%20dla%20L1.png)
+
 ## **4. Przegląd wyników i zaleceń** 
 #### 4.1. Nieprawidłowa implementacja mechanizmu haseł
 ###### Poziom ryzyka: Wysoki
