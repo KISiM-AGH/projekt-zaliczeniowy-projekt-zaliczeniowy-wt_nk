@@ -105,9 +105,9 @@ Wykryto następujące braki:
  * brak przedrostka "__Host-".
 Zalecenia:
 * W pliku settings.py dodać ustawienia:
-** SESSION_COOKIE_HTTPONLY = True,
-** SESSION_COOKIE_SAMESITE = True,
-** SESSION_COOKIE_NAME = '__Host-'.
+  - SESSION_COOKIE_HTTPONLY = True,
+  - SESSION_COOKIE_SAMESITE = True,
+  - SESSION_COOKIE_NAME = '__Host-'.
 ## **5. Sprawdzone zostało również**
 #### 1. Sql injection
 ###### Jedna z częstrzych i niebezpiecznych podatności w aplikacjach webowych. W aplikacji wykorzystywana jest baza danych postgresql będąca jedną z najbardziej popularnych wyborów.
