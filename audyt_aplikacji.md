@@ -52,7 +52,7 @@ Aplikacja e-commerce-food-shop-with-qr-codes jest aplikacją webową opartą o a
 ## **3. Testowanie komponentów i obszarów**
 ![Tabela](https://raw.githubusercontent.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/main/tabela.PNG)
 ![Wykres wszystkich wymagań](https://raw.githubusercontent.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/main/Liczba%20wymaga%C5%84%20zgodnych%2C%20niezgodnych%20i%20wy%C5%82%C4%85czonych.png)
-![Wykres wyników przetestowanych wymagań](https://raw.githubusercontent.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/main/Wynik%20audytu%20dla%20L1.png)
+![Wykres wyników przetestowanych wymagań](https://github.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/blob/main/Wynik%20audytu%20dla%20L1.png?raw=true)
 
 ## **4. Przegląd wyników i zaleceń** 
 #### 4.1. Nieprawidłowa implementacja mechanizmu haseł
@@ -187,6 +187,8 @@ Jedna z częstrzych i niebezpiecznych podatności w aplikacjach webowych. W apli
 W ramach przeprowadzenia testu wykorzystane zostało narzędzie Sqlmap pozwalające na automatyczne przeprowadzenie testów.
 W testowanej aplikacji mimo kilku prób również z wykorzystaniem level=5 risk=3 nie wykryto podatności na SQLInjection.
 Powodem odporności jest wykorzystanie frameworka Django (Python) w którym zapytania są konstruowane przy użyciu parametryzacji zapytań. Kod SQL zapytania jest definiowany niezależnie od parametrów zapytania. Parametry dostarczone przez użytkownia są pomijane przez podstawowy sterownik bazy danych.
+[!sqlinj1](https://raw.githubusercontent.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/main/sqlinj1.png)
+[!sqlinj2](https://raw.githubusercontent.com/KISiM-AGH/projekt-zaliczeniowy-projekt-zaliczeniowy-wt_nk/main/sqlinj2.png)
 
 #### 2. OS command injection
 ###### Poziom ryzyka: Wysoki
