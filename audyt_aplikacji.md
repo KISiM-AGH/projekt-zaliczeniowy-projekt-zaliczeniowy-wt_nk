@@ -54,9 +54,19 @@ Mechanizm haseł ma sporo braków w kontekście zabezpieczeń:
             -kilka spacji nie jest zamienane na jedną,
   * użytkownicy nie mogą zmienić hasła po zalogowaniu, mogą je jedynie zresetować przed zalogowaniem,
  * reset hasła wymaga maila, jednak mechanizm jego wysyłania posiada duże braki gdyż jest "hardkodowany", przez to nie udało się zweryfikować czy wymagane jest stare i nowe hasło,
- * hasła nie są porównywane z pulą najczęściej używanych haseł,
+ * hasła są częściowo porównywane z pulą najczęściej używanych haseł, jednak nie wykorzystano w tym przypadku zewnętrznego API
  * brak max limitu długości hasła, wymogi to min. 8 znaków, nie może się składać z samych cyfr,
  * użytkownik nie może wyświetlić wpisywanego hasła w formularz,
+#### 4.2. Ogólne zabezpieczenia uwierzytelniania
+###### Poziom ryzyka: Średni
+System zabezpieczający uwierzytelnianie posiada braki:
+ * brak implementacji CAPTCHA,
+ * konto nie jest blokowane przy masowych próbach ataku (brute force)
+ * brak weryfikacji email przy utworzeniu konta - użytkownik jedynie dostaje wiadomość mailową bez konieczności potwierdzenia założenia konta
+#### 4.3. Credential Recovery
+###### Poziom ryzyka: Średni
+ * domyślne konto administratora jest dostępne, jednak wynika to z faktu, że aplikacja jest tylko w trybie developerskim.
+ * użytkownik nie dostaje informacji e-mail po pomyślnym zresetowaniu hasła.
 ## **5. Sprawdzone zostało również**
 #### 1. Sql injection
 ###### TODO
