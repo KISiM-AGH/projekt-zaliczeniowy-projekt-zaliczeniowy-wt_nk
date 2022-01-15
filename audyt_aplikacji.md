@@ -52,21 +52,36 @@ Mechanizm haseł ma sporo braków w kontekście zabezpieczeń:
  * hasło może składać się z ponad 64 znaków, ale dozwolone są również hasła ponad 128 znakowe,
  * +hasła nie są obcinane jeśli zawierają spacje,
             -kilka spacji nie jest zamienane na jedną,
-  * użytkownicy nie mogą zmienić hasła po zalogowaniu, mogą je jedynie zresetować przed zalogowaniem,
- * reset hasła wymaga maila, jednak mechanizm jego wysyłania posiada duże braki gdyż jest "hardkodowany", przez to nie udało się zweryfikować czy wymagane jest stare i nowe hasło,
+ * użytkownicy nie mogą zmienić hasła po zalogowaniu, mogą je jedynie zresetować przed zalogowaniem, jeśli zapomnieli hasła.
  * hasła są częściowo porównywane z pulą najczęściej używanych haseł, jednak nie wykorzystano w tym przypadku zewnętrznego API
  * brak max limitu długości hasła, wymogi to min. 8 znaków, nie może się składać z samych cyfr,
- * użytkownik nie może wyświetlić wpisywanego hasła w formularz,
+ * użytkownik nie może wyświetlić wpisywanego hasła w formularz.
+###### Zalecenia:
+Należy zmodyfikować mechanizm haseł tak aby spełniał takie wymagania jak:
+ * minimalna długość hasła powinna wynosić 12 znaków,
+ * hasło nie powinno być dłuższe niż 128 znaków,
+ * jeśli w haśle znajdują się spacje, kilka spacji powinno być sklejane w jedną,
+ * dodać mechanizm zmiany hasła po zalogowaniu (dostępny jest tylko reset hasła przed logowaniem), taki mechanizm powinien wymagać podania starego hasła.
+
 #### 4.2. Ogólne zabezpieczenia uwierzytelniania
 ###### Poziom ryzyka: Średni
 System zabezpieczający uwierzytelnianie posiada braki:
  * brak implementacji CAPTCHA,
  * konto nie jest blokowane przy masowych próbach ataku (brute force)
  * brak weryfikacji email przy utworzeniu konta - użytkownik jedynie dostaje wiadomość mailową bez konieczności potwierdzenia założenia konta
+###### Zalecenia:
+ * dodać do mechanizmu logowania/rejestracji CAPTCHA,
+ * zaimplementować mechanizm, który będzie blokował konto po przekroczeniu danej ilości prób logowania (np. 15, 100), w celu uchronienia przed metodami takimi jak Brute Force,
+ * dodać wymóg zweryfikowania konta po jego rejestracji.
+
 #### 4.3. Credential Recovery
 ###### Poziom ryzyka: Średni
  * domyślne konto administratora jest dostępne, jednak wynika to z faktu, że aplikacja jest tylko w trybie developerskim.
  * użytkownik nie dostaje informacji e-mail po pomyślnym zresetowaniu hasła.
+###### Zalecenia:
+ * wyłączyć domyślne konto administratora i wprowadzić nową grupę użytkowników z podobnymi uprawnieniami,
+ * dodać wysyłanie wiadomości e-mail po pomyślnym zresetowaniu hasła.
+
 ## **5. Sprawdzone zostało również**
 #### 1. Sql injection
 ###### TODO
