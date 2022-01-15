@@ -108,6 +108,12 @@ Zalecenia:
   - SESSION_COOKIE_HTTPONLY = True,
   - SESSION_COOKIE_SAMESITE = True,
   - SESSION_COOKIE_NAME = '__Host-'.
+
+#### 4.6. Braki w obronie przeciwko lukom w zarządzaniu sesją
+###### Poziom ryzyka: Średni
+ * Aplikacja nie wymaga re-autentykacji lub dwu etapowej weryfikacji przed wprowadzeniem wrażliwych danych (adres dostawy, adres email).
+###### Zalecenia:
+ * Poprawić implementację po wprowadzeniu adresu email podczas rejestracji poprzez konieczność potwierdzenia założenia konta, oraz dodać wysyłanie e-mail'a po dodaniu adresu dostawy.
 ## **5. Sprawdzone zostało również**
 #### 1. Sql injection
 ###### Jedna z częstrzych i niebezpiecznych podatności w aplikacjach webowych. W aplikacji wykorzystywana jest baza danych postgresql będąca jedną z najbardziej popularnych wyborów.
