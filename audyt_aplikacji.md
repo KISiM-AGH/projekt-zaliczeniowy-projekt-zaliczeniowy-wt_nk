@@ -15,7 +15,7 @@
 #### **5. Sprawdzone zostało również**
 ## **1. Podsumowanie**
 #### Audyt aplikacji realizowany był jako audyt zgodności ze standardem Application Security Verification Standard 4.0.3 jak również pod kątem ogólnego bezpieczeństwa aplikacji.
-#### Ogólny stan zgodnośći aplikacji ze standardem ,,Application Security Verification Standard 4.0.3" można określić jako **TODO**.
+#### Ogólny stan zgodnośći aplikacji ze standardem ,,Application Security Verification Standard 4.0.3" można określić jako **Słaby**.
 #### Wyróżniono kilka głównych problemów wpływających na niezgodność aplikacji z wymaganiami standardu: TODO
 ## **2. Zakres i cele** 
 ### **2.1 Cel i metodologia audytu**
@@ -91,7 +91,16 @@ System zabezpieczający uwierzytelnianie posiada braki:
 ###### Zalecenia:
  * wyłączyć domyślne konto administratora i wprowadzić nową grupę użytkowników z podobnymi uprawnieniami,
  * dodać wysyłanie wiadomości e-mail po pomyślnym zresetowaniu hasła.
-
+#### 4.6. Brak ograniczeń przepływów logiki biznesowej
+###### Poziom ryzyka: Średni   
+ * brak limitu dla działań biznesowych i transkacji
+ * brak mechanizmu chroniącego przed nadmiernymi połączeniami
+ * brak weryfikacji czy kroki są przetwarzane w realistycznym czasie ludzkim
+ * brak dodatkowej weryfikacji przy składaniu zamówienia
+###### Zalecenia :
+ * przed wypuszczeniem aplikacji na etap produkcyjny należy dodać limity czasowe na przeprowadzanie zamówień
+ * ograniczenie maksymalnej liczby zamówień przez jednego użytkownika w określonym czasie do prawdopodobnej wartości
+ * dodatkowa weryfikacja użytkownika przy składaniu zamówienia np. reCAPTCHA
 ## **5. Sprawdzone zostało również**
 #### 1. Sql injection
 ###### Jedna z częstrzych i niebezpiecznych podatności w aplikacjach webowych. W aplikacji wykorzystywana jest baza danych postgresql będąca jedną z najbardziej popularnych wyborów.
