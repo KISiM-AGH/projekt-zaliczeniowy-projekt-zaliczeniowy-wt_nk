@@ -15,8 +15,8 @@
 #### **5. Sprawdzone zostało również**
 #### **6. Załączniki**
 ## **1. Podsumowanie**
-#### Audyt aplikacji realizowany był jako audyt zgodności ze standardem Application Security Verification Standard 4.0.3 jak również pod kątem ogólnego bezpieczeństwa aplikacji.
-#### Ogólny stan zgodnośći aplikacji ze standardem ,,Application Security Verification Standard 4.0.3" można określić jako **Słaby**.
+#### Audyt aplikacji realizowany był jako audyt zgodności ze standardem OWASP Application Security Verification Standard 4.0.3 jak również pod kątem ogólnego bezpieczeństwa aplikacji.
+#### Ogólny stan zgodnośći aplikacji ze standardem ,,OWASP Application Security Verification Standard 4.0.3" można określić jako **Słaby**.
 #### Wyróżniono kilka głównych problemów wpływających na niezgodność aplikacji z wymaganiami standardu: 
  * Nieprawidłowa implementacja mechanizmu haseł
  * Problem z  Ogólnymi zabezpieczeniami uwierzytelniania
