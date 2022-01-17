@@ -34,7 +34,7 @@
  * Błędy w ochronie przed OS command injection
 ## **2. Zakres i cele** 
 ### **2.1 Cel i metodologia audytu**
-#### Celem przeprowadzenia audytu była weryfikacja spełnienia standardu bezpieczeństwa ASVS 4.0 na poziomie 1  wobec nowoczesnych aplikacji webowych przez aplikacje e-commerce-food-shop-with-qr-codes.
+#### Celem przeprowadzenia audytu była weryfikacja spełnienia standardu bezpieczeństwa OWASP ASVS 4.0.3 na poziomie 1  wobec nowoczesnych aplikacji webowych przez aplikacje e-commerce-food-shop-with-qr-codes.
 ASVS 4.0 został wybrany ze względu na najbardziej szeroki zakres bezpiczeństwa wobec aplikacji webowych. Poziom 1 został wybrany dla aplikacji ze względu na jej stan deweloperski.
 ### **2.2 Zakres Audytu**
 ####  Audyt objął nastepujące obszary :
